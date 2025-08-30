@@ -1,4 +1,4 @@
-export class UserController {
+class UserController {
     constructor(userService) {
         this.userService = userService;
     }
@@ -7,3 +7,5 @@ export class UserController {
         return await this.userService.fetchUsers();
     }
 }
+
+export default UserController;
