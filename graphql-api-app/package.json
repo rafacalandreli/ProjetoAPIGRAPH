@@ -1,0 +1,19 @@
+{
+  "name": "graphql-api-app",
+  "version": "1.0.0",
+  "description": "A GraphQL API for user management and value transfers using Apollo Server.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "graphql": "^15.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
