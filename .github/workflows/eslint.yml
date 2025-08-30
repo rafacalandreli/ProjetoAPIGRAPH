@@ -30,17 +30,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install ESLint
+      - name: Install dependencies
         run: |
-          npm install eslint@8.10.0
+          cd graphql-api-app
+          npm install
           npm install @microsoft/eslint-formatter-sarif@3.1.0
+
+      - name: List files for debug
+        run: |
+          cd graphql-api-app
+          ls -l
 
       - name: Run ESLint
         env:
           SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
-        run: npx eslint .
-          --config eslint.config.mjs
-          --ext .js,.jsx,.ts,.tsx
-          --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+        run: |
+          cd graphql-api-app
+          npx eslint . --format @microsoft/eslint-formatter-sarif --output-file eslint-results.sarif
         continue-on-error: true
