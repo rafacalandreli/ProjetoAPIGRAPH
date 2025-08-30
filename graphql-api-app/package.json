@@ -13,8 +13,9 @@
     "graphql": "^15.5.0"
   },
   "devDependencies": {
-    "@eslint/js": "^8.56.0",
-    "eslint": "^8.56.0",
+    "@eslint/js": "8.56.0",
+    "@microsoft/eslint-formatter-sarif": "^3.1.0",
+    "eslint": "8.56.0",
     "nodemon": "^2.0.15"
   },
   "author": "Your Name",
